@@ -4,20 +4,26 @@ import Link from 'next/link'
 const NavBar = ({
   getConvo,
   friends,
+  newMessage,
   changeHome,
   changeMessage,
-  currentView,
+  addConvo,
+  currentChat
 }) => (
   <div id="navbar-container">
-    {currentView === 'messenger' && (
+    <div id='convo-status'>Chatting with {currentChat}</div>
       <Link href='/browser' prefetch>
         <a><img src="../static/house.png" id="house-button" alt='' /></a>
       </Link>
-    )}
+    <span>
+      {/*<i className="far fa-heart" />*/}
+      {/*TODO NEED TO MAKE THIS DISAPPEAR AFTER USER READS MESSAGE */}
+      <div>{newMessage ? 'You have a new message' : ''}</div>
+    </span>
     <div className="dropdown">
-      <button className="dropbtn">Menu</button>
+      <button className="dropbtn"><i className="fas fa-bars"></i></button>
       <div className="dropdown-content">
-        {currentView === 'browse' && <a onClick={changeMessage}>Messenger</a>}
+        <a onClick={addConvo}>Start a new convo</a>
         {friends.slice(-5).map((friend, i) => (
           <a key={i} onClick={() => getConvo(`${friend}`)}>
             {friend}
@@ -27,26 +33,32 @@ const NavBar = ({
     </div>
     <style>
       {`
+        #convo-status {
+          color: white;
+          font-size: .8em;
+        }
         a {
-        font-size: 12px;
+          font-size: 12px;
         }
         #navbar-container {
-        display: flex;
-        justify-content: flex-end;
+          display: flex;
+          justify-content: flex-end;
+          background-color: #0069E0;
         }
         #house-button {
-        margin-right: 12px;
-        height: 50px;
-        width: auto;
+          margin-right: 12px;
+          height: 50px;
+          width: auto;
         }
         .dropbtn {
             background-color: #0069E0;
             color: white;
-            padding: 10px;
             font-size: 16px;
             border: none;
             cursor: pointer;
             width: 120px;
+            margin: .5em .2em;
+            text-align: end;
         }
         .dropdown {
             position: relative;
@@ -63,7 +75,7 @@ const NavBar = ({
         }
         .dropdown-content a {
             color: black;
-            // padding: 12px 16px;
+             padding: 12px 16px;
             text-decoration: none;
             display: block;
         }

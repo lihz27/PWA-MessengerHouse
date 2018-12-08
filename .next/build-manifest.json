@@ -1,27 +1,35 @@
 {
-  "devFiles": [
-    "static/development/dll/dll_86d7de3159d32d38a4d2.js"
-  ],
+  "devFiles": [],
   "pages": {
     "/_app": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js",
-      "static/webpack/static/runtime/main.js.d7f32e05637270f7f1d6.hot-update.js"
+      "static/runtime/webpack-89179faa512dd01fbb62.js",
+      "static/chunks/commons.5fde10f1cf6625bec41a.js",
+      "static/runtime/main-cc31d1eabfa1eb464ad3.js"
     ],
-    "/_error": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js",
-      "static/webpack/static/runtime/main.js.d7f32e05637270f7f1d6.hot-update.js"
+    "/browser": [
+      "static/runtime/webpack-89179faa512dd01fbb62.js",
+      "static/chunks/commons.5fde10f1cf6625bec41a.js",
+      "static/runtime/main-cc31d1eabfa1eb464ad3.js"
     ],
     "/index": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js",
-      "static/webpack/static/runtime/main.js.d7f32e05637270f7f1d6.hot-update.js"
+      "static/runtime/webpack-89179faa512dd01fbb62.js",
+      "static/chunks/commons.5fde10f1cf6625bec41a.js",
+      "static/runtime/main-cc31d1eabfa1eb464ad3.js"
+    ],
+    "/messenger": [
+      "static/runtime/webpack-89179faa512dd01fbb62.js",
+      "static/chunks/commons.5fde10f1cf6625bec41a.js",
+      "static/runtime/main-cc31d1eabfa1eb464ad3.js"
+    ],
+    "/_error": [
+      "static/runtime/webpack-89179faa512dd01fbb62.js",
+      "static/chunks/commons.5fde10f1cf6625bec41a.js",
+      "static/runtime/main-cc31d1eabfa1eb464ad3.js"
     ],
     "/": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js",
-      "static/webpack/static/runtime/main.js.d7f32e05637270f7f1d6.hot-update.js"
+      "static/runtime/webpack-89179faa512dd01fbb62.js",
+      "static/chunks/commons.5fde10f1cf6625bec41a.js",
+      "static/runtime/main-cc31d1eabfa1eb464ad3.js"
     ]
   }
 }
